@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/sfrCover.png" type="image/png">
+  <title>Emerald High School Robotics · FTC Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Roboto:wght@400;500;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div id="site-content">
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <div class="brand" onclick="navigateTo('home')">
+      <img src="assets/SharpFace.png" alt="Emerald High School Robotics">
+      <div class="brand-t">
+        EHS Robotics
+        <small>Sharp Face · Dark Force</small>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a onclick="navigateTo('home')" data-page="home" class="active">Home</a>
+      <a onclick="navigateTo('team')" data-page="team">Team</a>
+      <a onclick="navigateTo('bios')" data-page="bios">Team Bios</a>
+      <a onclick="navigateTo('robot')" data-page="robot">Robot</a>
+      <a onclick="navigateTo('ai')" data-page="ai">Services</a>
+      <a onclick="navigateTo('sponsors')" data-page="sponsors">Sponsors</a>
+      <a onclick="navigateTo('contact')" data-page="contact">Contact</a>
+      <button type="button" onclick="openAdminModal()" id="admin-nav-trigger">Admin Login</button>
+    </div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="navigateTo('home'); toggleMobileMenu();" data-page="home" class="active">Home</a>
+  <a onclick="navigateTo('team'); toggleMobileMenu();" data-page="team">Team</a>
+  <a onclick="navigateTo('robot'); toggleMobileMenu();" data-page="robot">Robot</a>
+  <a onclick="navigateTo('bios'); toggleMobileMenu();" data-page="bios">Team Bios</a>
+  <a onclick="navigateTo('ai'); toggleMobileMenu();" data-page="ai">Services</a>
+  <a onclick="navigateTo('sponsors'); toggleMobileMenu();" data-page="sponsors">Sponsors</a>
+  <a onclick="navigateTo('contact'); toggleMobileMenu();" data-page="contact">Contact</a>
+  <button type="button" onclick="openAdminModal(); toggleMobileMenu();" id="admin-nav-trigger-mobile">Admin Login</button>
+</div>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-wrap">
+      <div>
+        <div class="eyebrow">Two FTC Teams · Emerald High School</div>
+        <h1 class="hero-h1">Emerald High School <span class="c">Robotics</span></h1>
+        <p class="hero-sub">Sharp Face Robotics and Dark Force Robotics build competitive robots through thoughtful engineering, reliable software, and ambitious teamwork.</p>
+        
+        <div class="awards">
+          <div class="award">
+            <div class="aw-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+            <div class="award-lbl">
+              <b>2nd Place Inspire</b>
+              <span>Sharp Face Robotics</span>
+            </div>
+          </div>
+          <div class="award">
+            <div class="aw-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+            <div class="award-lbl">
+              <b>Finalist Award</b>
+              <span>Sharp Face Robotics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <button class="btn btn-primary" onclick="navigateTo('bios')">Meet the Teams</button>
+          <button class="btn btn-ghost" onclick="navigateTo('contact')">Get in Touch</button>
+        </div>
+      </div>
+      <div class="hero-logo-col">
+        <div class="tilt-wrap" id="tilt">
+          <img src="assets/team.png" alt="Sharp Face Robotics team at Emerald High School">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM PREVIEW -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="s-tag">Who We Are</div>
+      <div class="s-h2">Our Teams</div>
+      <div class="bar"></div>
+      <div class="team-grid">
+        <div>
+          <div class="mission reveal">
+            <strong>Emerald High School Robotics</strong> brings together Sharp Face Robotics and Dark Force Robotics, two FIRST Tech Challenge teams in Dublin, California. Our students design, build, and program competitive robots while developing practical engineering, leadership, and problem-solving skills.
+          </div>
+          <div class="counters reveal">
+            <div class="counter"><div class="n">24</div><div class="l">Student Members</div></div>
+            <div class="counter"><div class="n">2</div><div class="l">FTC Teams</div></div>
+          </div>
+        </div>
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="p-tag">Design</div>
+            <div class="p-body">
+              <strong>Engineering Excellence</strong>
+              <p>Custom mecanum drivetrain, dual-compliant intake, and an iterated flywheel shooter — built for reliability all season long.</p>
+            </div>
+          </div>
+          <div class="pillar reveal">
+            <div class="p-tag">Software</div>
+            <div class="p-body">
+              <strong>Smart Autonomy</strong>
+              <p>Pedro Pathing, AprilTag vision, and voltage compensation — clean code that makes the robot feel effortless to drive.</p>
+            </div>
+          </div>
+          <div class="pillar reveal">
+            <div class="p-tag">Teamwork</div>
+            <div class="p-body">
+              <strong>Two Teams, One Program</strong>
+              <p>Sharp Face and Dark Force members collaborate through design reviews, test cycles, outreach, and competition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARP AI PREVIEW -->
+  <section class="section">
+    <div class="wrap">
+      <div class="s-tag">Innovation</div>
+      <div class="s-h2">Sharp AI</div>
+      <div class="bar"></div>
+      <div class="ai-card reveal">
+        <div class="ai-copy">
+          <p>Sharp Face Robotics struggled to find AI tools tailored to FTC programming — so its members built their own. <strong>Sharp</strong> is a large language model designed specifically to generate FTC-ready code, helping teams iterate faster and sharing that advantage with the wider robotics community.</p>
+          <a href="https://sharpai-2-7.vercel.app/" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:1.5rem;">
+            Launch Sharp AI
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+          </a>
+        </div>
+        <div class="ai-badge">
+          <div class="ai-badge-icon">
+            <svg class="icon" style="width:1.8rem;height:1.8rem" viewBox="0 0 24 24" fill="currentColor"><path d="M9 2v2H7a2 2 0 0 0-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9zm-2 4h10v10H7V6zm2 2v6h6V8H9z"></path></svg>
+          </div>
+          <div class="ai-badge-name">Sharp</div>
+          <div class="ai-badge-sub">FTC Code LLM</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CONTACT -->
+  <section class="contact-section" id="home-contact">
+    <div class="contact-in">
+      <img class="contact-logo" src="assets/SharpFace.png" alt="Emerald High School Robotics">
+      <div class="contact-h">Get in <span class="c">Touch</span></div>
+      <p class="contact-p">Interested in sponsoring, collaborating, or learning more about our teams? We'd love to hear from you.</p>
+      <button class="contact-email" id="copy-email" onclick="copyEmail()">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+        <span id="email-text">contact30450@gmail.com</span>
+        <svg class="icon" id="copy-icon" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5;font-size:.75em"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"></path></svg>
+      </button>
+    </div>
+  </section>
+</div>
+
+<!-- TEAM OVERVIEW PAGE -->
+<div class="page" id="page-team">
+  <div class="page-content">
+    <section class="section">
+      <div class="wrap">
+        <div class="s-tag">Who We Are</div>
+        <div class="s-h2">Our Teams</div>
+        <div class="bar"></div>
+        <div class="team-grid">
+          <div>
+            <div class="mission reveal">
+              <strong>Emerald High School Robotics</strong> is the home of Sharp Face Robotics and Dark Force Robotics, two FIRST Tech Challenge teams in Dublin, California. We design, build, and program competitive robots while developing practical engineering, leadership, and problem-solving skills.
+            </div>
+            <div class="counters reveal">
+              <div class="counter"><div class="n">24</div><div class="l">Student Members</div></div>
+              <div class="counter"><div class="n">2</div><div class="l">FTC Teams</div></div>
+            </div>
+          </div>
+          <div class="pillars">
+            <div class="pillar reveal">
+              <div class="p-tag">Design</div>
+              <div class="p-body">
+                <strong>Engineering Excellence</strong>
+                <p>Custom mecanum drivetrain, dual-compliant intake, and an iterated flywheel shooter — built for reliability all season long.</p>
+              </div>
+            </div>
+            <div class="pillar reveal">
+              <div class="p-tag">Software</div>
+              <div class="p-body">
+                <strong>Smart Autonomy</strong>
+                <p>Pedro Pathing, AprilTag vision, and voltage compensation — clean code that makes the robot feel effortless to drive.</p>
+              </div>
+            </div>
+            <div class="pillar reveal">
+              <div class="p-tag">Teamwork</div>
+              <div class="p-body">
+                <strong>Two Teams, One Program</strong>
+                <p>Sharp Face and Dark Force members collaborate through design reviews, test cycles, outreach, and competition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- TEAM BIOS PAGE -->
+<div class="page" id="page-bios">
+  <div class="page-content">
+    <section class="section alt">
+      <div class="wrap">
+        <div class="s-tag">Meet Our Teams</div>
+        <div class="s-h2">Team Bios</div>
+        <div class="bar"></div>
+        <div id="team-bios-root"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ROBOT PAGE -->
+<div class="page" id="page-robot">
+  <div class="page-content">
+    <section class="section">
+      <div class="wrap">
+        <div class="s-tag">Sharp Face Robotics · Robot Architecture</div>
+        <div class="s-h2">KG</div>
+        <div class="bar"></div>
+
+        <article class="robot-hero reveal" aria-labelledby="robot-overview-title">
+          <figure class="robot-img-wrap">
+            <img src="assets/explodedCad.png" alt="Exploded CAD of robot KG showing shooter, transfer, intake, drivetrain, and electronics assemblies.">
+          </figure>
+          <div>
+            <h3 class="robot-h3" id="robot-overview-title">Exploded CAD + System Overview</h3>
+            <p class="robot-p">
+              KG was built around reliability, cycle speed, and simple serviceability. Our design combines an integrated mecanum drivetrain, dual-compliant intake, compact transfer path, and a tuned single-flywheel launcher so the robot can keep consistent scoring pressure throughout a match.
+            </p>
+            <div class="specs" role="list" aria-label="Robot specification highlights">
+              <div class="spec-row" role="listitem"><strong>Drivebase</strong><span>Integrated mecanum with 45 degree rollers and low friction losses</span></div>
+              <div class="spec-row" role="listitem"><strong>Intake</strong><span>Dual-compliant 3-stage intake at 1150 RPM with a 35 degree ramp</span></div>
+              <div class="spec-row" role="listitem"><strong>Transfer</strong><span>Flicker + passive ramp handoff with approximately 0.83 second transfer</span></div>
+              <div class="spec-row" role="listitem"><strong>Launcher</strong><span>Single 3 inch flywheel tuned for approximately 50 degree scoring shots</span></div>
+              <div class="spec-row" role="listitem"><strong>Autonomous</strong><span>Pedro Pathing with AprilTag + odometry localization and correction</span></div>
+              <div class="spec-row" role="listitem"><strong>Cycle Timing</strong><span>Structured 1.5 second shot sequence with staged trigger reset logic</span></div>
+              <div class="spec-row" role="listitem"><strong>Controls</strong><span>State-machine architecture with voltage compensation and driver macros</span></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="features-list">
+          <article class="feat reveal">
+            <div class="feat-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h10l4 4v12H3V8l4-4zm1 2L5 9v9h14V9l-3-3H8zm4 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"></path></svg>
+            </div>
+            <div class="feat-h">Drivetrain</div>
+            <p class="feat-p">
+              The drivetrain evolved from our first ladder-drive prototype into a fully integrated mecanum frame, improving packaging, rigidity, and maintainability while preserving smooth omnidirectional control.
+            </p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="feat-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v4H4V5zm2 6h12v2H6v-2zm-2 4h16v4H4v-4z"></path></svg>
+            </div>
+            <div class="feat-h">Intake + Transfer</div>
+            <p class="feat-p">
+              A dual-compliant pitching intake and compact transfer chain were tuned through iteration to handle approach angle errors, keep artifact flow stable, and reduce jams under match pressure.
+            </p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="feat-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 12h8l2-8 8 2-2 8H9l-2 8-4-1 2-9z"></path></svg>
+            </div>
+            <div class="feat-h">Shooter</div>
+            <p class="feat-p">
+              The launcher geometry and compression were refined across multiple versions to improve shot repeatability, reduce spin-up delay between cycles, and maintain accuracy from distance.
+            </p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="feat-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 6v6c0 5 3.4 9.7 8 10 4.6-.3 8-5 8-10V6l-8-4zm0 3.1L17 7.4v4.6c0 3.7-2.2 7.2-5 7.8-2.8-.6-5-4.1-5-7.8V7.4l5-2.3z"></path></svg>
+            </div>
+            <div class="feat-h">Localization</div>
+            <p class="feat-p">
+              Limelight AprilTag sensing is fused with GoBILDA odometry for robust field awareness, enabling automatic alignment and distance-aware shooting in both autonomous and TeleOp.
+            </p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="feat-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v4H3V3zm2 6h6v12H5V9zm8 0h6v6h-6V9zm0 8h6v4h-6v-4z"></path></svg>
+            </div>
+            <div class="feat-h">Autonomous</div>
+            <p class="feat-p">
+              Pedro Pathing and explicit state machines drive repeatable autonomous routes with recovery logic, giving us reliable multi-action cycles instead of fragile timing-only routines.
+            </p>
+          </article>
+
+          <article class="feat reveal">
+            <div class="feat-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1 3 5v6c0 5.1 3.8 9.6 9 11 5.2-1.4 9-5.9 9-11V5l-9-4zm4 12h-3v3h-2v-3H8v-2h3V8h2v3h3v2z"></path></svg>
+            </div>
+            <div class="feat-h">Driver Experience</div>
+            <p class="feat-p">
+              Driver-centric controller mapping and macro actions keep controls predictable, so operators can focus on game awareness while automation handles repeatable timing-sensitive steps.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- SERVICES PAGE -->
+<div class="page" id="page-ai">
+  <div class="page-content">
+    <section class="section">
+      <div class="wrap">
+        <div class="s-tag">Innovation</div>
+        <div class="s-h2">Services</div>
+        <div class="bar"></div>
+        
+        <div class="services-container">
+          <!-- Sharp AI Card -->
+          <div class="ai-card reveal">
+            <div class="ai-copy">
+              <p>Sharp Face Robotics struggled to find AI tools tailored to FTC programming — so its members built their own. <strong>Sharp</strong> is a large language model designed specifically to generate FTC-ready code, helping teams iterate faster and sharing that advantage with the wider robotics community.</p>
+              <a href="https://sharpai-2-7.vercel.app/" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:1.5rem;">
+                Launch Sharp AI
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+              </a>
+            </div>
+            <div class="ai-badge">
+              <div class="ai-badge-icon">
+                <svg class="icon" style="width:1.8rem;height:1.8rem" viewBox="0 0 24 24" fill="currentColor"><path d="M9 2v2H7a2 2 0 0 0-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9zm-2 4h10v10H7V6zm2 2v6h6V8H9z"></path></svg>
+              </div>
+              <div class="ai-badge-name">Sharp</div>
+              <div class="ai-badge-sub">FTC Code LLM</div>
+            </div>
+          </div>
+
+          <!-- Telemark Card -->
+          <div class="ai-card reveal">
+            <div class="coming-soon-badge">Coming Soon</div>
+            <div class="ai-copy">
+              <p><strong>Telemark</strong> is a website to help new members learn Java for FTC, with a built-in simulator. A structured, level-gated curriculum built by student engineers. From Blocks to Bézier curves — every concept hands-on.</p>
+              <a href="https://sharpfacerobotics.github.io/ftc-curriculum" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:1.5rem;">
+                Visit Telemark
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+              </a>
+            </div>
+            <div class="ai-badge">
+              <img src="assets/telemark.png" alt="Telemark Logo">
+              <div class="ai-badge-name">Telemark</div>
+              <div class="ai-badge-sub">Master FTC Programming</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- SPONSORS PAGE -->
+<div class="page" id="page-sponsors">
+  <div class="page-content">
+    <section class="section">
+      <div class="wrap">
+        <div class="s-tag">Our Partners</div>
+        <div class="s-h2">Sponsors</div>
+        <div class="bar"></div>
+
+        <div class="sponsor-intro reveal">
+          We're grateful for the support of our sponsors, whose contributions fund competition fees, robot parts, tools, and the equipment we need to keep improving.
+        </div>
+
+        <div class="sponsor-grid">
+          <!-- Sponsor 1: Altair -->
+          <a href="https://www.altair.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/altair.webp" alt="Altair">
+          </a>
+
+          <!-- Sponsor 2: EHS PFSO -->
+          <a href="https://www.ehspfso.org/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/EHSpfso.webp" alt="EHS PFSO">
+          </a>  
+
+          <!-- Sponsor 3: FabWorks -->
+          <a href="https://www.fabworks.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/fabworks.png" alt="FabWorks">
+          </a>
+
+          <!-- Sponsor 4: FIRST -->
+          <a href="https://www.firstinspires.org/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/first.png" alt="FIRST">
+          </a>
+
+          <!-- Sponsor 5: GoBilda -->
+          <a href="https://www.gobilda.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/gobilda.jpg" alt="GoBilda">
+          </a>
+
+          <!-- Sponsor 6: Kaleido Effect -->
+          <a class="sponsor-card reveal">
+            <img src="assets/sponsors/KaleidoEffect.webp" alt="Kaleido Effect">
+          </a>
+
+          <!-- Sponsor 7: Northrop Grumman -->
+          <a href="https://www.northropgrumman.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/NorthropGrumman.png" alt="Northrop Grumman">
+          </a>
+
+          <!-- Sponsor 8: Online Metals -->
+          <a href="https://www.onlinemetals.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/onlineMetals.png" alt="Online Metals">
+          </a>
+
+          <!-- Sponsor 9: Workday -->
+          <a href="https://www.workday.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card reveal">
+            <img src="assets/sponsors/workday.png" alt="Workday">
+          </a>
+        </div>
+
+        <div class="sponsor-cta reveal">
+          <h3 class="sponsor-cta-h">Become a Sponsor</h3>
+          <p class="sponsor-cta-p">Interested in supporting our program? Sponsorships help both teams compete, innovate, and build stronger robots.</p>
+          <button class="btn btn-primary" onclick="navigateTo('contact')">Contact Us</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <div class="page-content">
+    <section class="contact-section" id="contact">
+      <div class="contact-in">
+        <img class="contact-logo" src="assets/SharpFace.png" alt="Emerald High School Robotics">
+        <div class="contact-h">Get in <span class="c">Touch</span></div>
+        <p class="contact-p">Interested in sponsoring, collaborating, or learning more about our teams? We'd love to hear from you.</p>
+        <button class="contact-email" id="copy-email-page" onclick="copyEmailPage()">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          <span id="email-text-page">contact30450@gmail.com</span>
+          <svg class="icon" id="copy-icon-page" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5;font-size:.75em"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"></path></svg>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025–26 Emerald High School Robotics · Sharp Face Robotics · Dark Force Robotics · Dublin, CA</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/sharpfacerobotics_ehs/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+      </svg>
+    </a>
+    <a href="https://github.com/sharpfacerobotics/SFRDecode" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path>
+      </svg>
+    </a>
+  </div>
+</footer>
+</div>
+
+<div class="admin-modal" id="admin-modal" aria-hidden="true">
+  <aside class="admin-panel" id="admin-panel" aria-live="polite" role="dialog" aria-modal="true" aria-label="Team Admin">
+    <div class="admin-head">
+      <div class="admin-title">Team Admin</div>
+      <button class="admin-close" type="button" id="admin-close-btn" aria-label="Close admin popup"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div class="admin-status" id="admin-status">Not signed in.</div>
+    <div class="admin-actions">
+      <button class="admin-btn full" type="button" id="admin-login-btn">Sign in with Google</button>
+      <button class="admin-btn" type="button" id="admin-edit-btn" disabled="">Enter Edit Mode</button>
+      <button class="admin-btn" type="button" id="admin-save-btn" disabled="">Save Changes</button>
+      <button class="admin-btn secondary" type="button" id="admin-cms-toggle">Use Firebase Content: On</button>
+      <button class="admin-btn secondary" type="button" id="admin-signout-btn" disabled="">Sign Out</button>
+      <button class="admin-btn full secondary" type="button" id="admin-commit-btn" disabled="">Commit to GitHub</button>
+      <button class="admin-btn full secondary" type="button" id="admin-copy-btn" disabled="">Copy Website Code</button>
+    </div>
+    <div class="admin-help">Double-click any image in Edit Mode to change its source.</div>
+  </aside>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="assets/js/team-data.js"></script>
+<script src="assets/js/team-bios.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/admin.js"></script>
+
+</body></html>

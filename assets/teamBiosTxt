@@ -1,0 +1,184 @@
+TEAM CAPTAIN +=============================
+
+Varun:
+
+          <div class="captain-card reveal">
+            <div class="captain-img">
+              <!-- Replace with: <img src="assets/captain.jpg" alt="Captain Name"> -->
+              <img src="assets/varun.png" alt="Varun Vasishta">
+            </div>
+            <div class="captain-name">Varun Vasishta</div>
+            <div class="captain-title">Team Captain</div>
+            <div class="captain-details">
+              <div class="captain-detail-item">
+                <span class="captain-detail-label">Grade</span>
+                Junior
+              </div>
+              <div class="captain-detail-item">
+                <span class="captain-detail-label">Favorite Part</span>
+                Crashing into the Fadhil wall with no regret
+              </div>
+            </div>
+          </div>
+
+COACHES +=====================================
+
+
+
+
+
+
+MECHANICAL +========================================
+
+Guhan:
+
+              <div class="bio-card reveal">
+                <div class="bio-img">
+                  <!-- Replace with: <img src="assets/member1.jpg" alt="Member Name"> -->
+                  <img src="assets/guhan.png" alt="Guhan Bala">
+                </div>
+                <div class="bio-content">
+                  <div class="bio-name">Guhan Bala</div>
+                  <div class="bio-roles">
+                    <span class="role-badge mechanical">Mechanical</span>
+                  </div>
+                  <div class="bio-details">
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Grade</span>
+                      Sophomore
+                    </div>
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Favorite Part</span>
+                      Being able to help the team from the ground up, learn engineering skills, meeting people from different teams and their approach to the season
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+Kevin:
+
+              <div class="bio-card reveal">
+                <div class="bio-img">
+                  <!-- Replace with: <img src="assets/member1.jpg" alt="Member Name"> -->
+                  <img src="assets/kevin.png" alt="Kevin Sun">
+                </div>
+                <div class="bio-content">
+                  <div class="bio-name">Kevin Sun</div>
+                  <div class="bio-roles">
+                    <span class="role-badge mechanical">Mechanical</span>
+                  </div>
+                  <div class="bio-details">
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Grade</span>
+                      Sophomore
+                    </div>
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Favorite Part</span>
+                      Watching the bot successfully have a 12 ball auto
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+Vivaan:
+
+              <div class="bio-card reveal">
+                <div class="bio-img">
+                  <!-- Replace with: <img src="assets/member1.jpg" alt="Member Name"> -->
+                  <img src="assets/vivaan.png" alt="Vivaan Brar">
+                </div>
+                <div class="bio-content">
+                  <div class="bio-name">Vivaan Brar</div>
+                  <div class="bio-roles">
+                    <span class="role-badge mechanical">Mechanical</span>
+                  </div>
+                  <div class="bio-details">
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Grade</span>
+                      Freshman
+                    </div>
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Favorite Part</span>
+                      The challenge and how it forced us to improvise solutions quickly. Last years challenge was a great learning experience for a rookie team and we are preparing to do our best this season
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+SOFTWARE +======================================================
+
+Arnav:
+
+              <div class="bio-card reveal">
+                <div class="bio-img">
+                  <!-- Replace with: <img src="assets/member5.jpg" alt="Member Name"> -->
+                  <img src="assets/arnav.png" alt="Arnav Gupta">
+                </div>
+                <div class="bio-content">
+                  <div class="bio-name">Arnav Gupta</div>
+                  <div class="bio-roles">
+                    <span class="role-badge software">Software</span>
+                  </div>
+                  <div class="bio-details">
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Grade</span>
+                      Junior
+                    </div>
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Favorite Part</span>
+                      Programming donut routes
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+Vivek:
+
+              <div class="bio-card reveal">
+                <div class="bio-img">
+                  <!-- Replace with: <img src="assets/member5.jpg" alt="Member Name"> -->
+                  <img src="assets/vivek.png" alt="Vivek Vasishta">
+                </div>
+                <div class="bio-content">
+                  <div class="bio-name">Vivek Vasishta</div>
+                  <div class="bio-roles">
+                    <span class="role-badge software">Software</span>
+                  </div>
+                  <div class="bio-details">
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Grade</span>
+                      8th
+                    </div>
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Favorite Part</span>
+                      Programming autonomous routines
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+Alex:
+
+              <div class="bio-card reveal">
+                <div class="bio-img">
+                  <!-- Replace with: <img src="assets/member5.jpg" alt="Member Name"> -->
+                  <img src="assets/alex.png" alt="Alex Xu">
+                </div>
+                <div class="bio-content">
+                  <div class="bio-name">Alex Xu</div>
+                  <div class="bio-roles">
+                    <span class="role-badge software">Software</span>
+                  </div>
+                  <div class="bio-details">
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Grade</span>
+                      Freshman
+                    </div>
+                    <div class="bio-detail-item">
+                      <span class="bio-detail-label">Favorite Part</span>
+                      Joining a competetive yet friendly community
+                    </div>
+                  </div>
+                </div>
+              </div>
