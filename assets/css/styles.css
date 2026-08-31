@@ -481,21 +481,6 @@
     .ai-badge-icon { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; background: rgba(82,219,212,.15); color: var(--cyan); }
     .ai-badge-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: .05em; line-height: 1; }
     .ai-badge-sub { font-family: 'Roboto Mono', monospace; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
-    .coming-soon-badge {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: linear-gradient(135deg, var(--gold), rgba(200,169,78,.7));
-      color: #000;
-      font-family: 'Roboto Mono', monospace;
-      font-size: .6rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      padding: .4rem .9rem;
-      border-radius: 2px;
-      font-weight: 600;
-      box-shadow: 0 2px 8px rgba(200,169,78,.3);
-    }
     .ai-badge img {
       width: 64px;
       height: 64px;
